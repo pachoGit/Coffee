@@ -1,0 +1,11 @@
+namespace Api.Services.CoffeeProducerHandler
+{
+    public class CreateCoffeeProducerRequest
+    {
+        public String? DocumentNumber { get; set; } = null;
+
+        public String FirstName { get; set; } = String.Empty;
+
+        public String? LastName { get; set; } = null;
+    }
+}
