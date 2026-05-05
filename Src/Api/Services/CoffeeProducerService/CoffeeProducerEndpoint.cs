@@ -1,5 +1,8 @@
 using Api.Services.CoffeeProducerService.CreateCoffeeProducer;
 using Api.Services.CoffeeProducerService.ListCoffeeProducer;
+using Api.Services.CoffeeProducerService.GetCoffeeProducerById;
+using Api.Services.CoffeeProducerService.UpdateCoffeeProducer;
+using Api.Services.CoffeeProducerService.DeleteCoffeeProducer;
 
 namespace Api.Services.CoffeeProducerService
 {
@@ -15,6 +18,9 @@ namespace Api.Services.CoffeeProducerService
             var routeGroup = RouteGroup(app);
             CreateCoffeeProducerEndpoint.Endpoint(routeGroup);
             ListCoffeeProducerEndpoint.Endpoint(routeGroup);
+            GetCoffeeProducerByIdEndpoint.Endpoint(routeGroup);
+            UpdateCoffeeProducerEndpoint.Endpoint(routeGroup);
+            DeleteCoffeeProducerEndpoint.Endpoint(routeGroup);
         }
     }
 }

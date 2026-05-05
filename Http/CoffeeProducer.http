@@ -1,27 +1,38 @@
-@CoffeHostAddress = http://localhost:5274
-@CoffeProducerBase = {{CoffeHostAddress}}/api/coffe-producer
+:BASE_URL = http://localhost:5274
+:COFFEE_PRODUCER_URL = :BASE_URL/api/coffee-producer
 
-GET {{CoffeProducerBase}}/list/
+GET :COFFEE_PRODUCER_URL/1
 Accept: application/json
 
 ###
 
-GET {{CoffeProducerBase}}/todos/1
-Accept: application/json
+PUT :COFFEE_PRODUCER_URL/1
+Content-Type: application/json
+{
+    "Id": 3,
+    "FirstName": "Maria",
+    "LastName": "Suarez",
+    "DocumentNumber": "23434"
+}
 
 ###
 
-
-GET http://localhost:5274/api/coffee-producer/list/?PageSize=10&PageNumber=1
+GET :COFFEE_PRODUCER_URL/list/?PageSize=10&PageNumber=1
 Accept: application/json
 
 ###
 
 POST http://localhost:5274/api/coffee-producer
-Accept: application/json
+Content-Type: application/json
 {
-    "firstName": "Pedro",
-    "lastName": "Hernandez",
-    "documentNumber": "182938"
+    "FirstName": "Manuel",
+    "LastName": "Salas",
+    "DocumentNumber": "81236"
 }
+
+###
+
+DELETE :COFFEE_PRODUCER_URL/1
+Accept: application/json
+
 ###

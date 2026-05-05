@@ -61,5 +61,6 @@ namespace Domain.Entity
          * Relaciones inversas
          */
 
+        public ICollection<BatchCoffeeProducer> Batches { get; set; } = new List<BatchCoffeeProducer>();
     }
 }

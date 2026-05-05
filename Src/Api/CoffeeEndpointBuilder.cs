@@ -6,7 +6,6 @@ namespace Api
     {
         public static void Build(WebApplication app)
         {
-            Console.WriteLine("Creando todos los endpoints");
             CoffeProducerEndpoint.Endpoints(app);
         }
     }
