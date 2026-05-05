@@ -32,8 +32,14 @@ namespace Domain.Entity
         /// <value>
         /// Variedad de cafe del lote de cafe
         /// </value>
-		[Column("coffee_variety", TypeName = "varchar(100)")]
-        public String? CoffeeVariety { get; set; }
+		[Column("coffee_variety_id", TypeName = "int")]
+        public int? CoffeeVarietyId { get; set; }
+
+        /// <value>
+        /// Tipo de cafe del lote de cafe
+        /// </value>
+		[Column("coffee_type_id", TypeName = "int")]
+        public int CoffeeTypeId { get; set; }
 
         /// <value>
         /// Humedad del lote de cafe
@@ -76,9 +82,21 @@ namespace Domain.Entity
         public CoffeeProducer Producer { get; set; } = null!;
 
         /// <value>
+        /// El tipo de cafe del lote de cafe
+        /// </value>
+        [ForeignKey("CoffeTypeId")]
+        public CoffeeType CoffeeType { get; set; } = null!;
+
+        /// <value>
+        /// La variedad de cafe del lote de cafe
+        /// </value>
+        [ForeignKey("CoffeVarietyId")]
+        public CoffeeVariety? CoffeeVariety { get; set; } = null;
+
+        /// <value>
         /// La compra del lote de cafe
         /// </value>
-        public PurchaseBatchCoffee? Purchase { get; set; } = null;
+        // public PurchaseBatchCoffee? Purchase { get; set; } = null;
 
         /*
          * Relaciones inversas
