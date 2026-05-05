@@ -1,8 +1,8 @@
 namespace Infra.Configurations
 {
-    public static class ConfigureEnv
+    public static class ConfigurationEnv
     {
-        public static void Configure(WebApplicationBuilder builder)
+        public static void Config(WebApplicationBuilder builder)
         {
             var environment = builder.Environment.EnvironmentName ?? "Development";
 

@@ -1,0 +1,27 @@
+@CoffeHostAddress = http://localhost:5274
+@CoffeProducerBase = {{CoffeHostAddress}}/api/coffe-producer
+
+GET {{CoffeProducerBase}}/list/
+Accept: application/json
+
+###
+
+GET {{CoffeProducerBase}}/todos/1
+Accept: application/json
+
+###
+
+
+GET http://localhost:5274/api/coffee-producer/list/?PageSize=10&PageNumber=1
+Accept: application/json
+
+###
+
+POST http://localhost:5274/api/coffee-producer
+Accept: application/json
+{
+    "firstName": "Pedro",
+    "lastName": "Hernandez",
+    "documentNumber": "182938"
+}
+###

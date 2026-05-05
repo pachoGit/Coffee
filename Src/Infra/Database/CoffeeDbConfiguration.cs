@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infra.Database
 {
-    public static class CoffeeDbConfigure
+    public static class CoffeeDbConfiguration
     {
-        public static void Configure(IServiceCollection services)
+        public static void Config(IServiceCollection services)
         {
             var connectionString = EnvVariables.CoffeeDbConnection;
             Console.WriteLine("Conexion a base de datos: " + connectionString);
