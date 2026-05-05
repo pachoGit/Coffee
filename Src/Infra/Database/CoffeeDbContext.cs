@@ -7,6 +7,8 @@ namespace Infra.Database
     {
         public DbSet<CoffeeProducer> CoffeeProducer { get; set; }
 
+        public DbSet<BatchCoffeeProducer> BatchCoffeeProducer { get; set; }
+
         public CoffeeDbContext(DbContextOptions<CoffeeDbContext> options) : base(options)
         {
         }
