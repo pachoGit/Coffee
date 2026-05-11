@@ -52,7 +52,7 @@ namespace Domain.Entity
         /// <value>
         /// Identificador del lote de cafe de la compra
         /// </value>
-        [Column("batch_coffee_producer_id", TypeName = "decimal(18,4)")]
+        [Column("batch_coffee_producer_id", TypeName = "int")]
         public int BatchCoffeeProducerId { get; set; }
 
         /// <value>

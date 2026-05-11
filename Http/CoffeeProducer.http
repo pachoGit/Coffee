@@ -25,9 +25,9 @@ Accept: application/json
 POST http://localhost:5274/api/coffee-producer
 Content-Type: application/json
 {
-    "FirstName": "Manuel",
-    "LastName": "Salas",
-    "DocumentNumber": "81236"
+    "FirstName": "Nombre",
+    "LastName": "Apellido",
+    "DocumentNumber": "71759245"
 }
 
 ###

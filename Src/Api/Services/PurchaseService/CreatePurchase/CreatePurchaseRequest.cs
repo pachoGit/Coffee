@@ -8,7 +8,7 @@ namespace Api.Services.PurchaseService.CreatePurchase
 
         public decimal TotalCost { get; set; }
 
-        public List<DetailPurchaseRequest> DetailPurchases = new();
+        public List<DetailPurchaseRequest> DetailPurchases { get; set; } = new();
     }
 
     public record DetailPurchaseRequest
@@ -23,7 +23,7 @@ namespace Api.Services.PurchaseService.CreatePurchase
 
         public int CoffeeTypeId { get; set; }
 
-        public PurchaseBatchRequest? PurchaseBatch = null;
+        public PurchaseBatchRequest? PurchaseBatch { get; set; } = null;
     }
 
     public record PurchaseBatchRequest
