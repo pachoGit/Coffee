@@ -21,7 +21,7 @@ namespace Api.Services.BatchCoffeeProducerService.CreateBatchCoffeeProducer
                 CoffeeVarietyId = request.CoffeeVarietyId,
                 CoffeeTypeId = request.CoffeeTypeId,
                 Humidity = request.Humidity,
-                CoffeProducerId = request.CoffeProducerId,
+                CoffeeProducerId = request.CoffeProducerId,
                 CreatedAt = DateTime.Now,
                 UpdateAt = DateTime.Now
             };

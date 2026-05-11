@@ -15,8 +15,6 @@ namespace Api.Services.CoffeeProducerService.CreateCoffeeProducer
 
         public async Task<int> Handle(CreateCoffeeProducerRequest request)
         {
-            Console.WriteLine("Test: CreateCoffeeProducer logic");
-
             var producer = new CoffeeProducer
             {
                 FirstName = request.FirstName,

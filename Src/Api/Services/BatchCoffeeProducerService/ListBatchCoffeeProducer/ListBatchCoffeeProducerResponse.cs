@@ -14,7 +14,7 @@ namespace Api.Services.BatchCoffeeProducerService.ListBatchCoffeeProducer
 
         public decimal Humidity { get; set; }
 
-        public int CoffeProducerId { get; set; }
+        public int CoffeeProducerId { get; set; }
 
         public DateTime CreatedAt { get; set; }
     }

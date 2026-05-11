@@ -25,7 +25,7 @@ namespace Api.Services.BatchCoffeeProducerService.ListBatchCoffeeProducer
                     CoffeeVarietyId = result.CoffeeVarietyId,
                     CoffeeTypeId = result.CoffeeTypeId,
                     Humidity = result.Humidity,
-                    CoffeProducerId = result.CoffeProducerId,
+                    CoffeeProducerId = result.CoffeeProducerId,
                     CreatedAt = result.CreatedAt
                 })
                 .ToList();

@@ -81,7 +81,7 @@ namespace Coffe.Migrations
 
                     b.HasIndex("CoffeVarietyId");
 
-                    b.ToTable("batch_coffee_producer");
+                    b.ToTable("batch_coffee_producer", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entity.CoffeeProducer", b =>
@@ -120,7 +120,7 @@ namespace Coffe.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("coffee_producer");
+                    b.ToTable("coffee_producer", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entity.CoffeeType", b =>
@@ -143,7 +143,7 @@ namespace Coffe.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("coffee_type");
+                    b.ToTable("coffee_type", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entity.CoffeeVariety", b =>
@@ -166,7 +166,7 @@ namespace Coffe.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("coffee_variety");
+                    b.ToTable("coffee_variety", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entity.BatchCoffeeProducer", b =>

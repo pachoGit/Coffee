@@ -27,7 +27,7 @@ namespace Api.Services.BatchCoffeeProducerService.UpdateBatchCoffeeProducer
             if (request.CoffeeVarietyId.HasValue) batch.CoffeeVarietyId = request.CoffeeVarietyId;
             if (request.CoffeeTypeId.HasValue) batch.CoffeeTypeId = request.CoffeeTypeId.Value;
             if (request.Humidity.HasValue) batch.Humidity = request.Humidity.Value;
-            if (request.CoffeProducerId.HasValue) batch.CoffeProducerId = request.CoffeProducerId.Value;
+            if (request.CoffeProducerId.HasValue) batch.CoffeeProducerId = request.CoffeProducerId.Value;
 
             batch.UpdateAt = DateTime.Now;
 
@@ -41,7 +41,7 @@ namespace Api.Services.BatchCoffeeProducerService.UpdateBatchCoffeeProducer
                 CoffeeVarietyId = batch.CoffeeVarietyId,
                 CoffeeTypeId = batch.CoffeeTypeId,
                 Humidity = batch.Humidity,
-                CoffeProducerId = batch.CoffeProducerId,
+                CoffeeProducerId = batch.CoffeeProducerId,
                 UpdatedAt = batch.UpdateAt
             };
         }

@@ -1,6 +1,6 @@
 using Api.Services.CoffeeProducerService;
 using Api.Services.BatchCoffeeProducerService;
-
+using Api.Services.PurchaseService;
 namespace Api
 {
     public static class CoffeeEndpointBuilder
@@ -9,6 +9,7 @@ namespace Api
         {
             CoffeProducerEndpoint.Endpoints(app);
             BatchCoffeeProducerEndpoint.Endpoints(app);
+            PurchaseServiceEndpoint.Endpoints(app);
         }
     }
 }

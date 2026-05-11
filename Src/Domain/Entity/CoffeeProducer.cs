@@ -27,13 +27,13 @@ namespace Domain.Entity
         /// Apellido del productor
         /// </value>
 		[Column("lastname", TypeName = "varchar(140)")]
-        public String? LastName { get; set; }
+        public String? LastName { get; set; } = null;
 
         /// <value>
         /// Número de documento de identificación del productor
         /// </value>
 		[Column("document_number", TypeName = "varchar(20)")]
-        public String? DocumentNumber { get; set; }
+        public String? DocumentNumber { get; set; } = null;
 
         /// <value>
         /// Fecha de creación del productor
@@ -51,7 +51,7 @@ namespace Domain.Entity
         /// Fecha de eliminación del productor
         /// </value>
 		[Column("deleted_at", TypeName = "datetime")]
-        public DateTime? DeleteAt { get; set; }
+        public DateTime? DeleteAt { get; set; } = null;
 
         /*
          * Relaciones directas
@@ -61,6 +61,14 @@ namespace Domain.Entity
          * Relaciones inversas
          */
 
+        /// <value>
+        /// Lista de lotes de cafe del productor
+        /// </value>
         public ICollection<BatchCoffeeProducer> Batches { get; set; } = new List<BatchCoffeeProducer>();
+
+        /// <value>
+        /// Lista de compras de cafe al productor
+        /// </value>
+        public ICollection<PurchaseCoffeeProducer> Purchases { get; set; } = new List<PurchaseCoffeeProducer>();
     }
 }

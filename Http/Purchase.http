@@ -1,0 +1,58 @@
+:BASE_URL = http://localhost:5274
+:COFFEE_PRODUCER_URL = :BASE_URL/api/purchase
+
+GET :COFFEE_PRODUCER_URL/1
+Accept: application/json
+
+###
+
+POST :COFFEE_PRODUCER_URL/
+Content-Type: application/json
+{
+    "CoffeeProducerId": 1,
+    "PurchaseDate": "2026-01-19",
+    "TotalCost": 179.90,
+    "DetailPurchases" :
+    [
+        {
+            "ScoreSCA": 1,
+            "ScreenSize": 0.50,
+            "Humidity": 13.00,
+            "CoffeeVarietyId": 1,
+            "CoffeeTypeId": 1,
+            "PurchaseBatch":
+            {
+                "Amount": 10.50,
+                "MeasurementUnitCoffeeId": 1,
+                "CoffeeMarketPrice": 1200.50,
+                "BatchPurchasePrice": 1105.60,
+                "ExpectedBatchSellingPrice": 1115.50
+            }
+        },
+
+        {
+            "ScoreSCA": 20,
+            "ScreenSize": 0.00,
+            "Humidity": 0.00,
+            "CoffeeVarietyId": null,
+            "CoffeeTypeId": 2,
+            "PurchaseBatch": null
+        },
+
+        {
+            "ScoreSCA": 25,
+            "ScreenSize": 0.50,
+            "Humidity": 13.00,
+            "CoffeeVarietyId": 1,
+            "CoffeeTypeId": 1,
+            "PurchaseBatch":
+            {
+                "Amount": 11.50,
+                "MeasurementUnitCoffeeId": 1,
+                "CoffeeMarketPrice": 1200.50,
+                "BatchPurchasePrice": 1105.60,
+                "ExpectedBatchSellingPrice": null
+            }
+        }
+    ]
+}
