@@ -70,6 +70,6 @@ namespace Domain.Entity
         /// <value>
         /// Detalles de la compra de cafe
         /// </value>
-        ICollection<DetailPurchaseCoffeeProducer> DetailPurchases = new List<DetailPurchaseCoffeeProducer>();
+        public ICollection<DetailPurchaseCoffeeProducer> DetailPurchases { get; set; } = new List<DetailPurchaseCoffeeProducer>();
     }
 }

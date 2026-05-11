@@ -1,4 +1,5 @@
 using Api.Services.PurchaseService.CreatePurchase;
+using Api.Services.PurchaseService.GetPurchaseById;
 
 namespace Api.Services.PurchaseService
 {
@@ -9,6 +10,7 @@ namespace Api.Services.PurchaseService
             var routeGroup = app.MapGroup("/api/purchase");
 
             CreatePurchaseEndpoint.Endpoint(routeGroup);
+            GetPurchaseByIdEndpoint.Endpoint(routeGroup);
         }
     }
 }

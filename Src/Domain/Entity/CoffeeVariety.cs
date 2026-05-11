@@ -28,6 +28,6 @@ namespace Domain.Entity
         /// Nombre de la variedad de cafe
         /// </value>
 		[Column("name", TypeName = "varchar(50)")]
-        public String? Name { get; set; }
+        public String Name { get; set; } = String.Empty;
     }
 }

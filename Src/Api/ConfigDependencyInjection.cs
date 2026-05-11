@@ -4,6 +4,7 @@ using Api.Services.CoffeeProducerService.GetCoffeeProducerById;
 using Api.Services.CoffeeProducerService.UpdateCoffeeProducer;
 using Api.Services.CoffeeProducerService.DeleteCoffeeProducer;
 using Api.Services.PurchaseService.CreatePurchase;
+using Api.Services.PurchaseService.GetPurchaseById;
 using Api.Services.BatchCoffeeProducerService.CreateBatchCoffeeProducer;
 using Api.Services.BatchCoffeeProducerService.ListBatchCoffeeProducer;
 using Api.Services.BatchCoffeeProducerService.GetBatchCoffeeProducerById;
@@ -22,6 +23,7 @@ namespace Api
             services.AddScoped<UpdateCoffeeProducerHandler>();
             services.AddScoped<DeleteCoffeeProducerHandler>();
             services.AddScoped<CreatePurchaseHandler>();
+            services.AddScoped<GetPurchaseByIdHandler>();
             services.AddScoped<CreateBatchCoffeeProducerHandler>();
             services.AddScoped<ListBatchCoffeeProducerHandler>();
             services.AddScoped<GetBatchCoffeeProducerByIdHandler>();

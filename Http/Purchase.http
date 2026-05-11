@@ -1,7 +1,7 @@
 :BASE_URL = http://localhost:5274
 :COFFEE_PRODUCER_URL = :BASE_URL/api/purchase
 
-GET :COFFEE_PRODUCER_URL/1
+GET :COFFEE_PRODUCER_URL/10
 Accept: application/json
 
 ###

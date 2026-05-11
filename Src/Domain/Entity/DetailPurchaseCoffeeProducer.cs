@@ -20,19 +20,19 @@ namespace Domain.Entity
         /// <value>
         /// El identificador de la compra de cafe
         /// </value>
-		[Column("purchase_coffee_producer_id", TypeName = "int")]
+        [Column("purchase_coffee_producer_id", TypeName = "int")]
         public int PurchaseCoffeeProducerId { get; set; }
 
         /// <value>
         /// El identificador del productor que se compro el cafe
         /// </value>
-		[Column("coffee_producer_id", TypeName = "int")]
+        [Column("coffee_producer_id", TypeName = "int")]
         public int CoffeeProducerId { get; set; }
 
         /// <value>
         /// El identificador del lote de cafe
         /// </value>
-		[Column("batch_coffee_producer_id", TypeName = "int")]
+        [Column("batch_coffee_producer_id", TypeName = "int")]
         public int BatchCoffeeProducerId { get; set; }
 
         /// <value>
