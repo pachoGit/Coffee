@@ -56,3 +56,10 @@ Content-Type: application/json
         }
     ]
 }
+
+###
+
+GET :COFFEE_PRODUCER_URL/list
+Accept: application/json
+
+###
