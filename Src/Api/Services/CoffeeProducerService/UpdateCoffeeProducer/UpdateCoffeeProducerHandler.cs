@@ -1,6 +1,4 @@
-using Domain.Entity;
 using Infra.Database;
-using Microsoft.EntityFrameworkCore;
 
 namespace Api.Services.CoffeeProducerService.UpdateCoffeeProducer
 {

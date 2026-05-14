@@ -1,3 +1,4 @@
+using Api.Services.Common;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Services.CoffeeProducerService.DeleteCoffeeProducer
@@ -9,7 +10,9 @@ namespace Api.Services.CoffeeProducerService.DeleteCoffeeProducer
             routeGroup.MapDelete("/{id}", async ([FromRoute] int id, DeleteCoffeeProducerHandler handler) =>
             {
                 var result = await handler.Handle(id);
-                return result ? Results.NoContent() : Results.NotFound();
+                return result 
+                    ? Results.Ok(new CoffeeResponse<bool>(true, "Coffee producer deleted successfully"))
+                    : Results.NotFound(new CoffeeResponse<bool>(false, "Coffee producer not found"));
             });
         }
     }

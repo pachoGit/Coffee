@@ -19,6 +19,7 @@ namespace Api.Services.CoffeeProducerService.ListCoffeeProducer
             var response = results
                 .Select(result => new ListCoffeeProducerResponse
                         {
+                            Id = result.Id,
                             FirstName = result.FirstName,
                             LastName = result.LastName,
                             DocumentNumber = result.DocumentNumber,

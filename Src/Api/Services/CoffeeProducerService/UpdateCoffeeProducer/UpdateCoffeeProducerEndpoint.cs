@@ -1,3 +1,4 @@
+using Api.Services.Common;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Services.CoffeeProducerService.UpdateCoffeeProducer
@@ -10,7 +11,9 @@ namespace Api.Services.CoffeeProducerService.UpdateCoffeeProducer
             {
                 request.Id = id;
                 var result = await handler.Handle(request);
-                return result != null ? Results.Ok(result) : Results.NotFound();
+                return result != null 
+                    ? Results.Ok(new CoffeeResponse<UpdateCoffeeProducerResponse>(result, "Coffee producer updated successfully"))
+                    : Results.NotFound(new CoffeeResponse<UpdateCoffeeProducerResponse>(null!, "Coffee producer not found"));
             });
         }
     }

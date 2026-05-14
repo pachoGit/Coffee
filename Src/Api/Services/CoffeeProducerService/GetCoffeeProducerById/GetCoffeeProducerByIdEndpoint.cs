@@ -1,3 +1,4 @@
+using Api.Services.Common;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Services.CoffeeProducerService.GetCoffeeProducerById
@@ -9,7 +10,9 @@ namespace Api.Services.CoffeeProducerService.GetCoffeeProducerById
             routeGroup.MapGet("/{id}", async ([FromRoute] int id, GetCoffeeProducerByIdHandler handler) =>
             {
                 var result = await handler.Handle(id);
-                return result != null ? Results.Ok(result) : Results.NotFound();
+                return result != null 
+                    ? Results.Ok(new CoffeeResponse<GetCoffeeProducerByIdResponse>(result, "Coffee producer retrieved successfully"))
+                    : Results.NotFound(new CoffeeResponse<GetCoffeeProducerByIdResponse>(null!, "Coffee producer not found"));
             });
         }
     }

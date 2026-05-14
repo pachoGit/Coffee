@@ -1,3 +1,4 @@
+using Api.Services.Common;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Services.CoffeeProducerService.CreateCoffeeProducer
@@ -9,7 +10,7 @@ namespace Api.Services.CoffeeProducerService.CreateCoffeeProducer
             routeGroup.MapPost("/", async ([FromBody] CreateCoffeeProducerRequest request, CreateCoffeeProducerHandler handler) =>
             {
                 var id = await handler.Handle(request);
-                return Results.Created($"/api/coffee-producers/{id}", new { Id = id });
+                return Results.Created($"/api/coffee-producers/{id}", new CoffeeResponse<int>(id, "Coffee producer created successfully"));
             });
         }
     }

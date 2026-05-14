@@ -10,7 +10,14 @@ CoffeeDbConfiguration.Config(builder.Services);
 
 ConfigDependencyInjection.Config(builder.Services);
 
+builder.Services.AddCors(o => o.AddPolicy("corsApp", builder =>
+{
+    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+}));
+
 var app = builder.Build();
+
+app.UseCors("corsApp");
 
 CoffeeEndpointBuilder.Build(app);
 
