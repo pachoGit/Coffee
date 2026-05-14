@@ -1,19 +1,9 @@
-
-using System.Text.Json.Serialization;
-using Microsoft.AspNetCore.Mvc;
+using Api.Services.Common;
 
 namespace Api.Services.CoffeeProducerService.ListCoffeeProducer
 {
-    public record ListCoffeeProducerRequest
-    {
-        public int? PageSize { get; set; }
-
-        public int? PageNumber { get; set; }
-    }
-
-    [JsonSerializable(typeof(ListCoffeeProducerRequest))]
-    internal partial class ListCoffeeProducerRequestContext : JsonSerializerContext
-    {
-
-    }
+    public record ListCoffeeProducerRequest(
+        int PageSize = 10,
+        int PageNumber = 1
+    ) : ListPageableRequest(PageSize, PageNumber);
 }

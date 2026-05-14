@@ -1,36 +1,16 @@
-using Api.Services.CoffeeProducerService.CreateCoffeeProducer;
-using Api.Services.CoffeeProducerService.ListCoffeeProducer;
-using Api.Services.CoffeeProducerService.GetCoffeeProducerById;
-using Api.Services.CoffeeProducerService.UpdateCoffeeProducer;
-using Api.Services.CoffeeProducerService.DeleteCoffeeProducer;
-using Api.Services.PurchaseService.CreatePurchase;
-using Api.Services.PurchaseService.GetPurchaseById;
-using Api.Services.PurchaseService.ListPurchase;
-using Api.Services.BatchCoffeeProducerService.CreateBatchCoffeeProducer;
-using Api.Services.BatchCoffeeProducerService.ListBatchCoffeeProducer;
-using Api.Services.BatchCoffeeProducerService.GetBatchCoffeeProducerById;
-using Api.Services.BatchCoffeeProducerService.UpdateBatchCoffeeProducer;
-using Api.Services.BatchCoffeeProducerService.DeleteBatchCoffeeProducer;
+using Api.Services.CoffeeProducerService;
+using Api.Services.BatchCoffeeProducerService;
+using Api.Services.PurchaseService;
 
 namespace Api
 {
-    public static class ConfigDependecyInjection
+    public static class ConfigDependencyInjection
     {
         public static void Config(IServiceCollection services)
         {
-            services.AddScoped<CreateCoffeeProducerHandler>();
-            services.AddScoped<ListCoffeeProducerHandler>();
-            services.AddScoped<GetCoffeeProducerByIdHandler>();
-            services.AddScoped<UpdateCoffeeProducerHandler>();
-            services.AddScoped<DeleteCoffeeProducerHandler>();
-            services.AddScoped<CreatePurchaseHandler>();
-            services.AddScoped<GetPurchaseByIdHandler>();
-            services.AddScoped<ListPurchaseHandler>();
-            services.AddScoped<CreateBatchCoffeeProducerHandler>();
-            services.AddScoped<ListBatchCoffeeProducerHandler>();
-            services.AddScoped<GetBatchCoffeeProducerByIdHandler>();
-            services.AddScoped<UpdateBatchCoffeeProducerHandler>();
-            services.AddScoped<DeleteBatchCoffeeProducerHandler>();
+            CoffeeProducerDependencyInjection.Config(services);
+            BatchCoffeeProducerDependencyInjection.Config(services);
+            PurchaseDependencyInjection.Config(services);
         }
     }
 }

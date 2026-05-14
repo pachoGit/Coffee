@@ -8,7 +8,7 @@ ConfigurationEnv.Config(builder);
 
 CoffeeDbConfiguration.Config(builder.Services);
 
-ConfigDependecyInjection.Config(builder.Services);
+ConfigDependencyInjection.Config(builder.Services);
 
 var app = builder.Build();
 
