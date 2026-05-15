@@ -1,6 +1,13 @@
+using Api.Services.Common;
+
 namespace Api.Services.PurchaseService.ListPurchase
 {
-    public class ListPurchaseResponse
+    public class ListPurchaseResponse : CoffeeResponsePageable
+    {
+        public List<DataListPurchaseResponse> Result { get; set; } = new();
+    }
+
+    public class DataListPurchaseResponse
     {
         public int Id { get; set; }
 

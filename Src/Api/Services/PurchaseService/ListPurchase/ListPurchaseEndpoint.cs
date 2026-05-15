@@ -1,3 +1,5 @@
+using Api.Services.Common;
+
 namespace Api.Services.PurchaseService.ListPurchase
 {
     public static class ListPurchaseEndpoint
@@ -7,7 +9,7 @@ namespace Api.Services.PurchaseService.ListPurchase
             routeGroup.MapGet("/list", async ([AsParameters] ListPurchaseRequest request, ListPurchaseHandler handler) =>
             {
                 var response = await handler.Handle(request);
-                return Results.Ok(response);
+                return Results.Ok(new CoffeeResponse<ListPurchaseResponse>(response, "Purchases retrieved successfully"));
             });
         }
     }

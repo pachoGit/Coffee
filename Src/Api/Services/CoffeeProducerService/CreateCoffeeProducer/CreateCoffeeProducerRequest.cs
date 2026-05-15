@@ -1,5 +1,3 @@
-using System.Text.Json.Serialization;
-
 namespace Api.Services.CoffeeProducerService.CreateCoffeeProducer
 {
     public record CreateCoffeeProducerRequest
@@ -9,11 +7,5 @@ namespace Api.Services.CoffeeProducerService.CreateCoffeeProducer
         public String FirstName { get; set; } = String.Empty;
 
         public String? LastName { get; set; } = null;
-    }
-
-    [JsonSerializable(typeof(CreateCoffeeProducerRequest))]
-    internal partial class CreateCoffeeProducerRequestContext : JsonSerializerContext
-    {
-
     }
 }

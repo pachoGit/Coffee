@@ -12,22 +12,48 @@ namespace Api.Services.CoffeeProducerService.ListCoffeeProducer
             _context = context;
         }
 
-        public async Task<List<ListCoffeeProducerResponse>> Handle(ListCoffeeProducerRequest request)
+        public async Task<ListCoffeeProducerResponse> Handle(ListCoffeeProducerRequest request)
         {
-            var results = await _context.CoffeeProducer.ToListAsync();
+            var query = _context.CoffeeProducer.AsQueryable();
 
-            var response = results
-                .Select(result => new ListCoffeeProducerResponse
-                        {
-                            Id = result.Id,
-                            FirstName = result.FirstName,
-                            LastName = result.LastName,
-                            DocumentNumber = result.DocumentNumber,
-                            CreatedAt = result.CreatedAt
-                        })
-                .ToList();
+            if (!string.IsNullOrWhiteSpace(request.Name))
+            {
+                var nameLower = request.Name.ToLower();
+                query = query.Where(p => 
+                    p.FirstName.ToLower().Contains(nameLower) || 
+                    (p.LastName != null && p.LastName.ToLower().Contains(nameLower)));
+            }
+
+            if (!string.IsNullOrWhiteSpace(request.DocumentNumber))
+            {
+                query = query.Where(p => p.DocumentNumber == request.DocumentNumber);
+            }
+
+            var total = await query.CountAsync();
+
+            var results = await query
+                .Skip((request.PageNumber - 1) * request.PageSize)
+                .Take(request.PageSize)
+                .ToListAsync();
+
+            var response = new ListCoffeeProducerResponse
+            {
+                Result = results.Select(result => new DataListCoffeeProducerResponse
+                {
+                    Id = result.Id,
+                    FirstName = result.FirstName,
+                    LastName = result.LastName,
+                    DocumentNumber = result.DocumentNumber,
+                    CreatedAt = result.CreatedAt
+                }).ToList(),
+                Total = total,
+                PageSize = request.PageSize,
+                PageNumer = request.PageNumber,
+                TotalPages = (int)Math.Ceiling((double)total / request.PageSize)
+            };
 
             return response;
         }
     }
 }
+

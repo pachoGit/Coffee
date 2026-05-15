@@ -12,7 +12,7 @@ namespace Api.Services.PurchaseService.ListPurchase
             _context = context;
         }
 
-        public async Task<List<ListPurchaseResponse>> Handle(ListPurchaseRequest request)
+        public async Task<ListPurchaseResponse> Handle(ListPurchaseRequest request)
         {
             var query = _context.PurchaseCoffeeProducer
                 .Include(p => p.Producer)
@@ -46,21 +46,30 @@ namespace Api.Services.PurchaseService.ListPurchase
                 query = query.Where(p => p.TotalPrice <= endPrice);
             }
 
+            var total = await query.CountAsync();
+
             var results = await query
                 .OrderByDescending(p => p.PurchaseDate)
                 .Skip((request.PageNumber - 1) * request.PageSize)
                 .Take(request.PageSize)
                 .ToListAsync();
 
-            var response = results.Select(result => new ListPurchaseResponse
+            var response = new ListPurchaseResponse
             {
-                Id = result.Id,
-                PurchaseDate = result.PurchaseDate,
-                TotalPrice = result.TotalPrice,
-                NameProducer = result.Producer.FirstName + " " + result.Producer.LastName,
-                CreatedAt = result.CreatedAt,
-                UpdatedAt = result.UpdateAt
-            }).ToList();
+                Result = results.Select(result => new DataListPurchaseResponse
+                {
+                    Id = result.Id,
+                    PurchaseDate = result.PurchaseDate,
+                    TotalPrice = result.TotalPrice,
+                    NameProducer = result.Producer.FirstName + " " + result.Producer.LastName,
+                    CreatedAt = result.CreatedAt,
+                    UpdatedAt = result.UpdateAt
+                }).ToList(),
+                Total = total,
+                PageSize = request.PageSize,
+                PageNumer = request.PageNumber,
+                TotalPages = (int)Math.Ceiling((double)total / request.PageSize)
+            };
 
             return response;
         }
