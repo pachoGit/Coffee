@@ -36,3 +36,8 @@ DELETE :COFFEE_PRODUCER_URL/1
 Accept: application/json
 
 ###
+
+###
+
+GET :COFFEE_PRODUCER_URL/select
+Accept: application/json

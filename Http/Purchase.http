@@ -1,12 +1,12 @@
 :BASE_URL = http://localhost:5274
-:COFFEE_PRODUCER_URL = :BASE_URL/api/purchase
+:PURCHASE_URL = :BASE_URL/api/purchase
 
-GET :COFFEE_PRODUCER_URL/10
+GET :PURCHASE_URL/10
 Accept: application/json
 
 ###
 
-POST :COFFEE_PRODUCER_URL/
+POST :PURCHASE_URL/
 Content-Type: application/json
 {
     "CoffeeProducerId": 1,
@@ -59,7 +59,7 @@ Content-Type: application/json
 
 ###
 
-GET :COFFEE_PRODUCER_URL/list
+GET :PURCHASE_URL/list
 Accept: application/json
 
 ###

@@ -3,6 +3,7 @@ using Api.Services.CoffeeProducerService.ListCoffeeProducer;
 using Api.Services.CoffeeProducerService.GetCoffeeProducerById;
 using Api.Services.CoffeeProducerService.UpdateCoffeeProducer;
 using Api.Services.CoffeeProducerService.DeleteCoffeeProducer;
+using Api.Services.CoffeeProducerService.SelectCoffeeProducer;
 
 namespace Api.Services.CoffeeProducerService
 {
@@ -15,6 +16,7 @@ namespace Api.Services.CoffeeProducerService
             services.AddScoped<GetCoffeeProducerByIdHandler>();
             services.AddScoped<UpdateCoffeeProducerHandler>();
             services.AddScoped<DeleteCoffeeProducerHandler>();
+            services.AddScoped<SelectCoffeeProducerHandler>();
         }
     }
 }
