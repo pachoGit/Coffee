@@ -1,0 +1,7 @@
+:BASE_URL = http://localhost:5274
+:MEASUREMENT_UNIT_COFFEE_URL = :BASE_URL/api/measurement-unit-coffee
+
+GET :MEASUREMENT_UNIT_COFFEE_URL/select
+Accept: application/json
+
+###
