@@ -1,0 +1,7 @@
+:BASE_URL = http://localhost:5274
+:COFFEE_TYPE_URL = :BASE_URL/api/coffee-type
+
+GET :COFFEE_TYPE_URL/select
+Accept: application/json
+
+###

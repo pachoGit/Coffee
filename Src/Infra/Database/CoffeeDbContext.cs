@@ -17,6 +17,10 @@ namespace Infra.Database
 
         public DbSet<MeasurementUnitCoffee> MeasurementUnitCoffee { get; set; }
 
+        public DbSet<CoffeeVariety> CoffeeVariety { get; set; }
+
+        public DbSet<CoffeeType> CoffeeType { get; set; }
+
         public CoffeeDbContext(DbContextOptions<CoffeeDbContext> options) : base(options)
         {
         }

@@ -1,6 +1,8 @@
 using Api.Services.CoffeeProducerService;
 using Api.Services.BatchCoffeeProducerService;
 using Api.Services.PurchaseService;
+using Api.Services.CoffeeVarietyService;
+using Api.Services.CoffeeTypeService;
 
 namespace Api
 {
@@ -11,6 +13,8 @@ namespace Api
             CoffeeProducerDependencyInjection.Config(services);
             BatchCoffeeProducerDependencyInjection.Config(services);
             PurchaseDependencyInjection.Config(services);
+            CoffeeVarietyDependencyInjection.Config(services);
+            CoffeeTypeDependencyInjection.Config(services);
         }
     }
 }
