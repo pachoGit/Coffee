@@ -4,7 +4,7 @@ namespace Api.Services.BatchCoffeeProducerService.CreateBatchCoffeeProducer
 {
     public record CreateBatchCoffeeProducerRequest
     {
-        public decimal ScoreSCA { get; set; }
+        public decimal Performance { get; set; }
 
         public decimal ScreenSize { get; set; }
 

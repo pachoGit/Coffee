@@ -13,7 +13,7 @@ namespace Api.Services.PurchaseService.CreatePurchase
 
     public record DetailPurchaseRequest
     {
-        public decimal ScoreSCA { get; set; }
+        public decimal Performance { get; set; }
 
         public decimal ScreenSize { get; set; }
 

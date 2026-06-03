@@ -18,10 +18,10 @@ namespace Domain.Entity
         public int Id { get; set; }
 
         /// <value>
-        /// Puntaje SCA (Specialty Coffee Association) del lote de cafe
+        /// Rendimiento del lote de cafe
         /// </value>
-        [Column("score_sca", TypeName = "decimal(18,4)")]
-        public decimal ScoreSCA { get; set; } = 0;
+        [Column("performance", TypeName = "decimal(18,4)")]
+        public decimal Performance { get; set; } = 0;
 
         /// <value>
         /// Tamaño del grano de cafe

@@ -1,7 +1,7 @@
 :BASE_URL = http://localhost:5274
 :PURCHASE_URL = :BASE_URL/api/purchase
 
-GET :PURCHASE_URL/10
+GET :PURCHASE_URL/8
 Accept: application/json
 
 ###
@@ -15,7 +15,7 @@ Content-Type: application/json
     "DetailPurchases" :
     [
         {
-            "ScoreSCA": 1,
+            "Performance": 1,
             "ScreenSize": 0.50,
             "Humidity": 13.00,
             "CoffeeVarietyId": 1,
@@ -31,7 +31,7 @@ Content-Type: application/json
         },
 
         {
-            "ScoreSCA": 20,
+            "Performance": 20,
             "ScreenSize": 0.00,
             "Humidity": 0.00,
             "CoffeeVarietyId": null,
@@ -40,7 +40,7 @@ Content-Type: application/json
         },
 
         {
-            "ScoreSCA": 25,
+            "Performance": 25,
             "ScreenSize": 0.50,
             "Humidity": 13.00,
             "CoffeeVarietyId": 1,

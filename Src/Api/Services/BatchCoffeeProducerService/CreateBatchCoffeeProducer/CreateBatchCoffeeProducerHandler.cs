@@ -16,7 +16,7 @@ namespace Api.Services.BatchCoffeeProducerService.CreateBatchCoffeeProducer
         {
             var batch = new BatchCoffeeProducer
             {
-                ScoreSCA = request.ScoreSCA,
+                Performance = request.Performance,
                 ScreenSize = request.ScreenSize,
                 CoffeeVarietyId = request.CoffeeVarietyId,
                 CoffeeTypeId = request.CoffeeTypeId,

@@ -31,7 +31,7 @@ namespace Api.Services.PurchaseService.GetPurchaseById
     {
         public int Id { get; set; }
 
-        public decimal ScoreSCA { get; set; }
+        public decimal Performance { get; set; }
 
         public decimal ScreenSize { get; set; }
 

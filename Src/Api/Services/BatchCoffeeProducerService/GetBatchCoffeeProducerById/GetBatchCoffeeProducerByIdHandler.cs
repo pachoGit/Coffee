@@ -24,7 +24,7 @@ namespace Api.Services.BatchCoffeeProducerService.GetBatchCoffeeProducerById
             return new GetBatchCoffeeProducerByIdResponse
             {
                 Id = result.Id,
-                ScoreSCA = result.ScoreSCA,
+                Performance = result.Performance,
                 ScreenSize = result.ScreenSize,
                 CoffeeVarietyId = result.CoffeeVarietyId,
                 CoffeeTypeId = result.CoffeeTypeId,

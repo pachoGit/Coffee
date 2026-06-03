@@ -83,7 +83,7 @@ namespace Api.Services.PurchaseService.GetPurchaseById
         {
             DetailPurchaseGetPurchase result = new();
             result.Id = detail.Id;
-            result.ScoreSCA = detail.Batch.ScoreSCA;
+            result.Performance = detail.Batch.Performance;
             result.ScreenSize = detail.Batch.ScreenSize;
             result.Humidity = detail.Batch.Humidity;
             result.CoffeeVariety = GetCoffeeVariety(detail);

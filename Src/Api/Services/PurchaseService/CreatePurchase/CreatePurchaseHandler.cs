@@ -62,7 +62,7 @@ namespace Api.Services.PurchaseService.CreatePurchase
         {
             return details.Select(d => new BatchCoffeeProducer
             {
-                ScoreSCA = d.ScoreSCA,
+                Performance = d.Performance,
                 ScreenSize = d.ScreenSize,
                 Humidity = d.Humidity,
                 CoffeeVarietyId = d.CoffeeVarietyId,

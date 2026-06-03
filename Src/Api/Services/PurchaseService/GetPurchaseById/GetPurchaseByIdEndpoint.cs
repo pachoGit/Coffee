@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+using Api.Services.Common;
 
 namespace Api.Services.PurchaseService.GetPurchaseById
 {
@@ -11,9 +11,9 @@ namespace Api.Services.PurchaseService.GetPurchaseById
                 var response = await handler.Handle(id);
                 if (response == null)
                 {
-                    return Results.NotFound(new { message = "Purchase not found" });
+                    return Results.NotFound(new CoffeeResponse<GetPurchaseByIdResponse>(null!, "Purchase not found"));
                 }
-                return Results.Ok(response);
+                return Results.Ok(new CoffeeResponse<GetPurchaseByIdResponse>(response, "Purchase retrieved successfully"));
             });
         }
     }

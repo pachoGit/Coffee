@@ -22,7 +22,7 @@ namespace Api.Services.BatchCoffeeProducerService.UpdateBatchCoffeeProducer
                 return null;
             }
 
-            if (request.ScoreSCA.HasValue) batch.ScoreSCA = request.ScoreSCA.Value;
+            if (request.Performance.HasValue) batch.Performance = request.Performance.Value;
             if (request.ScreenSize.HasValue) batch.ScreenSize = request.ScreenSize.Value;
             if (request.CoffeeVarietyId.HasValue) batch.CoffeeVarietyId = request.CoffeeVarietyId;
             if (request.CoffeeTypeId.HasValue) batch.CoffeeTypeId = request.CoffeeTypeId.Value;
@@ -36,7 +36,7 @@ namespace Api.Services.BatchCoffeeProducerService.UpdateBatchCoffeeProducer
             return new UpdateBatchCoffeeProducerResponse
             {
                 Id = batch.Id,
-                ScoreSCA = batch.ScoreSCA,
+                Performance = batch.Performance,
                 ScreenSize = batch.ScreenSize,
                 CoffeeVarietyId = batch.CoffeeVarietyId,
                 CoffeeTypeId = batch.CoffeeTypeId,

@@ -20,7 +20,7 @@ namespace Api.Services.BatchCoffeeProducerService.ListBatchCoffeeProducer
                 .Select(result => new ListBatchCoffeeProducerResponse
                 {
                     Id = result.Id,
-                    ScoreSCA = result.ScoreSCA,
+                    Performance = result.Performance,
                     ScreenSize = result.ScreenSize,
                     CoffeeVarietyId = result.CoffeeVarietyId,
                     CoffeeTypeId = result.CoffeeTypeId,
