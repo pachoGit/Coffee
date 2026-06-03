@@ -1,6 +1,7 @@
 using Api.Services.PurchaseService.CreatePurchase;
 using Api.Services.PurchaseService.GetPurchaseById;
 using Api.Services.PurchaseService.ListPurchase;
+using Api.Services.PurchaseService.UpdatePurchase;
 
 namespace Api.Services.PurchaseService
 {
@@ -11,6 +12,7 @@ namespace Api.Services.PurchaseService
             services.AddScoped<CreatePurchaseHandler>();
             services.AddScoped<GetPurchaseByIdHandler>();
             services.AddScoped<ListPurchaseHandler>();
+            services.AddScoped<UpdatePurchaseHandler>();
         }
     }
 }

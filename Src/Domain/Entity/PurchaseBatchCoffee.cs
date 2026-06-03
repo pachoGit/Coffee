@@ -56,6 +56,12 @@ namespace Domain.Entity
         public int BatchCoffeeProducerId { get; set; }
 
         /// <value>
+        /// Precio total de la compra del lote de cafe
+        /// </value>
+        [Column("total_purchase_price", TypeName = "decimal(18,4)")]
+        public decimal TotalPurchasePrice { get; set; } = 0;
+
+        /// <value>
         /// Fecha de creación de la compra
         /// </value>
         [Column("created_at", TypeName = "datetime")]
