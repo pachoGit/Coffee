@@ -118,6 +118,7 @@ namespace Api.Services.PurchaseService.CreatePurchase
                 BatchPurchasePrice = request.BatchPurchasePrice,
                 ExpectedBatchSellingPrice = request.ExpectedBatchSellingPrice,
                 BatchCoffeeProducerId = batchId,
+                TotalPurchasePrice = request.TotalPurchasePrice,
                 CreatedAt = DateTime.UtcNow,
                 UpdateAt = DateTime.UtcNow
             };

@@ -58,7 +58,8 @@ namespace Domain.Entity
         /// <value>
         /// Precio total de la compra del lote de cafe
         /// </value>
-        [Column("total_purchase_price", TypeName = "decimal(18,4)")]
+        // [Column("total_purchase_price", TypeName = "decimal(18,4)")]
+        [NotMapped]
         public decimal TotalPurchasePrice { get; set; } = 0;
 
         /// <value>

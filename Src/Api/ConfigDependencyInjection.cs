@@ -4,6 +4,7 @@ using Api.Services.PurchaseService;
 using Api.Services.CoffeeVarietyService;
 using Api.Services.CoffeeTypeService;
 using Api.Services.MeasurementUnitCoffeeService;
+using Api.Services.OverviewService;
 
 namespace Api
 {
@@ -17,6 +18,7 @@ namespace Api
             CoffeeVarietyDependencyInjection.Config(services);
             CoffeeTypeDependencyInjection.Config(services);
             MeasurementUnitCoffeeDependencyInjection.Config(services);
+            OverviewDependencyInjection.Config(services);
         }
     }
 }

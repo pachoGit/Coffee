@@ -1,0 +1,7 @@
+:BASE_URL = http://localhost:5274
+:OVERVIEW_URL = :BASE_URL/api/overview
+
+GET :OVERVIEW_URL/purchase
+Accept: application/json
+
+###

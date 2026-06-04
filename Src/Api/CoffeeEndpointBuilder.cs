@@ -4,6 +4,7 @@ using Api.Services.PurchaseService;
 using Api.Services.CoffeeVarietyService;
 using Api.Services.CoffeeTypeService;
 using Api.Services.MeasurementUnitCoffeeService;
+using Api.Services.OverviewService;
 namespace Api
 {
     public static class CoffeeEndpointBuilder
@@ -16,6 +17,7 @@ namespace Api
             CoffeeVarietyEndpoint.Endpoints(app);
             CoffeeTypeEndpoint.Endpoints(app);
             MeasurementUnitCoffeeEndpoint.Endpoints(app);
+            OverviewServiceEndpoint.Endpoints(app);
         }
     }
 }

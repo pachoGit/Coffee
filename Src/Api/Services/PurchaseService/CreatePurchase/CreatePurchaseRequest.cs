@@ -37,5 +37,7 @@ namespace Api.Services.PurchaseService.CreatePurchase
         public decimal BatchPurchasePrice { get; set; }
 
         public decimal? ExpectedBatchSellingPrice { get; set; }
+
+        public decimal TotalPurchasePrice { get; set; }
     }
 }
